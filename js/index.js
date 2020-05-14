@@ -2,6 +2,7 @@ let board = document.getElementById('board');
 let novaTarefa = document.getElementById('novaTarefa');
 let btnAdd = document.getElementById('add');
 
+
 function adicionarTarefa() {  
   tarefa = novaTarefa.value;
   if(tarefa != ''){
@@ -17,3 +18,6 @@ function adicionarTarefa() {
 }
 btnAdd.addEventListener('click', adicionarTarefa);
 
+novaTarefa.addEventListener('keypress', (event) => {
+  if( event.keyCode === 13) adicionarTarefa();
+})
